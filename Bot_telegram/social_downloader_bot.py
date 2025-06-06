@@ -3,9 +3,13 @@ from telegram.ext import Application, CommandHandler, ContextTypes, CallbackQuer
 import yt_dlp
 import os
 import tempfile
+from decouple import config
+
+# Load the secret key
+
 
 # Replace with your Telegram bot token
-TOKEN = "7886961216:AAE0Q5CJe7sgqibTjHyTDHOXaN3ADIwtJew"
+TOKEN = config("BOT_API")
 
 # Define the commands and their descriptions
 commands = [
